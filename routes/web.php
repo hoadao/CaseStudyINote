@@ -16,8 +16,18 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+    Route::get('/notetyper','NotetyperController@index')->name('index');
+    Route::get('/create','NotetyperController@create')->name('create');
+    Route::post('/create','NotetyperController@store')->name('store');
+    Route::get('{id}/edit','NotetyperController@edit')->name('edit');
+    Route::post('{id}/edit','NotetyperController@update')->name('update');
+    Route::get('{id}/delete','NotetyperController@destroy')->name('delete');
+    Route::get('{id}/detail','NotetyperController@detail')->name('detail');
+
+
 Route::group(['prefix' => 'note'], function () {
     Route::get('/', 'NotesController@index')->name('note.index');
     Route::get('/create','NotesController@create')->name('note.create');
