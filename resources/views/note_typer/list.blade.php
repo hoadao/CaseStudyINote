@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 @section('content')
     <h1>Note typer</h1>
     <form class="inotetyper" method="post">
@@ -6,7 +6,7 @@
         <input type="text" name="search" placeholder="enter search">
         <input type="submit" value="Search">
     </form>
-    <table border="1" cellspacing="0">
+    <table border="1" cellspacing="1">
         <tr>
             <td>id</td>
             <td>name</td>
