@@ -51,7 +51,7 @@
                 <div class="col-12">
                     <div class="card text-left" style="width: 100%;">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $note->name }}</h5>
+                            <h5 class="card-title">{{ $note->title }}:</h5>
                             <p class="card-text">{{ $note->content }}</p>
 
                         </div>
